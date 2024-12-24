@@ -12,10 +12,12 @@
 	},
 	"dependencies": {
 		"@tailwindcss/postcss": "^4.0.0-beta.8",
+		"jsx-to-html": "^1.1.0",
 		"next": "15.1.2",
 		"postcss": "^8.4.49",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
+		"react-icons": "^5.4.0",
 		"tailwindcss": "^4.0.0-beta.8"
 	},
 	"devDependencies": {
