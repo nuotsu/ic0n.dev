@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+@layer base {
+	input {
+		@apply border border-neutral-300;
+	}
+
+	button {
+		cursor: pointer;
+		text-decoration: underline dashed;
+
+		&:hover {
+			text-decoration-style: solid;
+		}
+	}
+}

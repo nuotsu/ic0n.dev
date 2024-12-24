@@ -1,9 +1,14 @@
+import Header from '@/ui/Header'
+import Footer from '@/ui/Footer'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
 	title: 'Icons',
 	description: '',
+	icons: {
+		icon: '/fa/FaReact?fill=dodgerblue',
+	},
 }
 
 export default function RootLayout({
@@ -13,11 +18,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head>
-				<link rel="shortcut icon" href="/fa/FaReact?fill=dodgerblue" />
-			</head>
 			<body>
+				<Header />
 				<main>{children}</main>
+				<Footer />
 			</body>
 		</html>
 	)

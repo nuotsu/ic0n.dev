@@ -12,12 +12,14 @@
 	},
 	"dependencies": {
 		"@tailwindcss/postcss": "^4.0.0-beta.8",
+		"clsx": "^2.1.1",
 		"jsx-to-html": "^1.1.0",
 		"next": "15.1.2",
 		"postcss": "^8.4.49",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-icons": "^5.4.0",
+		"tailwind-merge": "^2.6.0",
 		"tailwindcss": "^4.0.0-beta.8"
 	},
 	"devDependencies": {

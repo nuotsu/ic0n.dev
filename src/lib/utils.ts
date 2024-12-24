@@ -1,3 +1,10 @@
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+export function cn(...inputs: ClassValue[]) {
+	return twMerge(clsx(inputs))
+}
+
 export function propsToString(props: Record<string, any>): string {
 	return Object.entries(props)
 		.filter(([key]) => key !== 'children')
