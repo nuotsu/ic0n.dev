@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
 	title: 'Icons',
-	description: '',
+	description: ' SVG icon URLs, courtesy of react-icons',
 	icons: {
 		icon: '/fa/FaReact?fill=dodgerblue',
 	},
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
+			<body className="grid items-center gap-4">
 				<Header />
 				<main>{children}</main>
 				<Footer />

@@ -17,14 +17,17 @@ export async function GET(
 	const iconProps = IconComponent({}).type({}).props
 
 	const searchParams = new URL(request.url).searchParams
+	const color =
+		(searchParams.has('hex') && `#${searchParams.get('hex')}`) ||
+		searchParams.get('fill')
+	const hasStroke = attr.strokeLinecap || attr.strokeLinejoin
 
 	const props = {
-		stroke: iconProps.stroke,
-		fill:
-			(searchParams.has('hex') && `#${searchParams.get('hex')}`) ||
-			searchParams.get('fill') ||
-			iconProps.fill,
-		'stroke-width': iconProps.strokeWidth,
+		stroke: hasStroke && color ? color : attr.stroke || 'currentColor',
+		'stroke-width': attr.strokeWidth || 0,
+		'stroke-linecap': attr.strokeLinecap,
+		'stroke-linejoin': attr.strokeLinejoin,
+		fill: hasStroke ? 'none' : color || attr.fill,
 		viewBox: attr.viewBox,
 		height: iconProps.height,
 		width: iconProps.width,

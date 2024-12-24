@@ -8,7 +8,13 @@ export function cn(...inputs: ClassValue[]) {
 export function propsToString(props: Record<string, any>): string {
 	return Object.entries(props)
 		.filter(([key]) => key !== 'children')
-		.map(([key, value]) => `${key}="${value}"`)
+		.filter(([, value]) => value !== undefined)
+		.map(([key, value]) => {
+			// convert camelCase to kebab-case
+			const kebabCaseKey =
+				key !== 'viewBox' ? key.replace(/([A-Z])/g, '-$1').toLowerCase() : key
+			return `${kebabCaseKey}="${value}"`
+		})
 		.join(' ')
 }
 

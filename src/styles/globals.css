@@ -1,16 +1,40 @@
 @import 'tailwindcss';
 
+@theme {
+	--color-react-icons: #e91e63;
+}
+
 @layer base {
+	* {
+		min-width: 0;
+	}
+
 	input {
 		@apply border border-neutral-300;
 	}
 
-	button {
+	a,
+	button,
+	label {
 		cursor: pointer;
-		text-decoration: underline dashed;
+		@apply link;
+	}
 
-		&:hover {
-			text-decoration-style: solid;
+	table {
+		& :is(th, td) {
+			@apply px-4 py-2;
 		}
+
+		& tr:nth-child(even) {
+			@apply bg-neutral-100;
+		}
+	}
+}
+
+@utility link {
+	text-decoration: underline dashed;
+
+	&:hover {
+		text-decoration-style: solid;
 	}
 }
