@@ -2,15 +2,26 @@
 
 @theme {
 	--color-react-icons: #e91e63;
+	--color-dodgerblue: dodgerblue;
 }
 
 @layer base {
+	:root {
+		accent-color: dodgerblue;
+		caret-color: dodgerblue;
+	}
+
 	* {
 		min-width: 0;
 	}
 
+	:focus-visible {
+		@apply ring-dodgerblue/20 ring-4 outline-none;
+	}
+
 	input {
-		@apply border border-neutral-300;
+		outline: none !important;
+		@apply focus:border-dodgerblue rounded border border-neutral-300 px-1;
 	}
 
 	a,
@@ -22,7 +33,7 @@
 
 	table {
 		& :is(th, td) {
-			@apply px-4 py-2;
+			@apply p-4;
 		}
 
 		& tr:nth-child(even) {

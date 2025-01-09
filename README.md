@@ -23,3 +23,8 @@ Or, use as a CSS mask:
 	mask: url(https://icons.nuotsu.dev/fa/FaReact) center/cover;
 }
 ```
+
+## Alternative URLs
+
+- https://icons.nuotsu.dev
+- https://icons.sanitypress.dev

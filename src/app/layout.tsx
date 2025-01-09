@@ -1,13 +1,16 @@
 import Header from '@/ui/Header'
 import Footer from '@/ui/Footer'
-import '@/styles/globals.css'
 import type { Metadata } from 'next'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-	title: 'Icons',
+	title: 'Icons as <img> tags',
 	description: ' SVG icon URLs, courtesy of react-icons',
 	icons: {
 		icon: '/fa/FaReact?fill=dodgerblue',
+	},
+	alternates: {
+		canonical: 'https://icons.nuotsu.dev',
 	},
 }
 
