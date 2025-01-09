@@ -1,4 +1,4 @@
-# Icon URLs
+# Icons as `<img>` tags
 
 > SVG icon URLs, courtesy of [`react-icons`](https://react-icons.github.io/react-icons/)
 
