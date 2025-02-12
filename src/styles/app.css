@@ -24,12 +24,20 @@
 		caret-color: var(--color-accent);
 	}
 
-	label,
+	label {
+		cursor: pointer;
+	}
+
 	button {
 		cursor: pointer;
+		@apply focus-visible:text-accent;
 	}
 
 	input {
 		@apply placeholder:text-ink/50;
+
+		&[list]::-webkit-list-button {
+			opacity: 0;
+		}
 	}
 }

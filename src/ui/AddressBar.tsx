@@ -12,13 +12,16 @@ export default function AddressBar() {
 			<span className="text-ink/50">/</span>
 			<input
 				id="address-bar"
-				className="min-w-[1ch]"
-				style={{ width: `${addressBarWidth || DEFAULT_ICON.length}ch` }}
+				className="min-w-[1ch] max-sm:mr-[-1.8ch] max-sm:[--ios-fix:2ch]"
+				style={{
+					width: `calc(${addressBarWidth || DEFAULT_ICON.length}ch + var(--ios-fix, 0ch))`,
+				}}
 				list="iconsets"
 				value={icon}
 				onChange={(e) => setIcon(e.target.value as Icon.Path)}
 				type="text"
 				pattern="[a-z0-9]{2,3}/[a-zA-Z0-9]+"
+				spellCheck={false}
 				placeholder={DEFAULT_ICON}
 				tabIndex={0}
 			/>

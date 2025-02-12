@@ -42,6 +42,7 @@ export async function GET(
 		{
 			headers: {
 				'Content-Type': 'image/svg+xml',
+				'Access-Control-Allow-Origin': '*',
 			},
 		},
 	)

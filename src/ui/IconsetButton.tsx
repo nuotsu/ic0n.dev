@@ -9,7 +9,7 @@ export default function IconsetButton({ iconset }: { iconset: Icon.Set }) {
 	return (
 		<button
 			className={cn(
-				'text-ink/50 focus-visible:text-accent hover:text-ink w-full pr-[1ch] text-left',
+				'text-ink/50 hover:text-ink w-full pr-[1ch] text-left',
 				icon.split('/')[0] === iconset && 'text-ink',
 			)}
 			onClick={() => {

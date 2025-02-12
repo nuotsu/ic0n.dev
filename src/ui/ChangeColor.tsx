@@ -3,7 +3,7 @@
 import { useStore } from '@/lib/store'
 
 export default function ChangeColor() {
-	const { color, setColor, colorChanged, removeColor } = useStore()
+	const { setColor, colorChanged, removeColor } = useStore()
 
 	return (
 		<>

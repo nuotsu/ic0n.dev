@@ -5,6 +5,11 @@ import { create } from 'zustand'
 export const DEFAULT_ICON = 'vsc/VscCode'
 export const DEFAULT_COLOR = 'white'
 
+const BASE_URL =
+	process.env.NODE_ENV === 'development'
+		? 'http://localhost:3000'
+		: 'https://ic0n.dev'
+
 export const useStore = create<{
 	icon: Icon.Path
 	color: string
@@ -42,6 +47,6 @@ export const getUrl = ({
 	const color = getColor()
 
 	return colorChanged || showColorParam
-		? `https://ic0n.dev/${icon}?${color}`
-		: `https://ic0n.dev/${icon}`
+		? `${BASE_URL}/${icon}?${color}`
+		: `${BASE_URL}/${icon}`
 }
