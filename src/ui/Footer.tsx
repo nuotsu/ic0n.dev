@@ -1,8 +1,9 @@
 export default function Footer() {
 	return (
 		<footer className="text-center text-sm">
-			&copy; {new Date().getFullYear()} Built by{' '}
-			<a href="https://nuotsu.dev">nuotsu</a>
+			<code>ic0n.dev</code>
+			{' by '}
+			<a className='no-underline' href="https://nuotsu.dev">nuotsu</a>
 		</footer>
 	)
 }

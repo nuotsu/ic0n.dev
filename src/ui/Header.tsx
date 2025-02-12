@@ -36,7 +36,7 @@ export default function Header() {
 			>
 				<img
 					className="size-6"
-					src="https://icons.nuotsu.dev/vsc/VscGithub?fill=white"
+					src="https://ic0n.dev/vsc/VscGithub?fill=white"
 					alt="GitHub"
 				/>
 			</a>
