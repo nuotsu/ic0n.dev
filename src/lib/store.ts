@@ -1,20 +1,28 @@
 'use client'
 
 import { create } from 'zustand'
-import type { IconPath } from './iconManifest'
 
 export const DEFAULT_ICON = 'vsc/VscCode'
+export const DEFAULT_COLOR = 'white'
 
 export const useStore = create<{
-	icon: IconPath
+	icon: Icon.Path
 	color: string
-	setIcon: (icon: IconPath) => void
+	colorChanged: boolean
+	mask: boolean
+	setIcon: (icon: Icon.Path) => void
 	setColor: (color: string) => void
+	removeColor: () => void
+	setMask: (mask: boolean) => void
 }>((set) => ({
 	icon: DEFAULT_ICON,
-	color: 'white',
+	color: DEFAULT_COLOR,
+	colorChanged: false,
+	mask: false,
 	setIcon: (icon) => set({ icon }),
-	setColor: (color) => set({ color }),
+	setColor: (color) => set({ color, colorChanged: true }),
+	removeColor: () => set({ color: DEFAULT_COLOR, colorChanged: false }),
+	setMask: (mask) => set({ mask }),
 }))
 
 export const getColor = () => {
@@ -25,4 +33,15 @@ export const getColor = () => {
 export const getAddressBarSize = () => {
 	const { icon } = useStore()
 	return icon.length
+}
+
+export const getUrl = ({
+	showColorParam,
+}: { showColorParam?: boolean } = {}) => {
+	const { icon, colorChanged } = useStore()
+	const color = getColor()
+
+	return colorChanged || showColorParam
+		? `https://ic0n.dev/${icon}?${color}`
+		: `https://ic0n.dev/${icon}`
 }

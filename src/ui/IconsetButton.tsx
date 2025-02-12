@@ -2,16 +2,15 @@
 
 import { useStore } from '@/lib/store'
 import { cn } from '@/lib/utils'
-import type { Iconset } from '@/lib/iconManifest'
 
-export default function IconsetButton({ iconset }: { iconset: Iconset }) {
+export default function IconsetButton({ iconset }: { iconset: Icon.Set }) {
 	const { icon, setIcon } = useStore()
 
 	return (
 		<button
 			className={cn(
-				'text-ink/50 w-full pr-[1ch] text-left hover:text-white',
-				icon.startsWith(`${iconset}/`) && 'text-white',
+				'text-ink/50 focus-visible:text-accent hover:text-ink w-full pr-[1ch] text-left',
+				icon.split('/')[0] === iconset && 'text-ink',
 			)}
 			onClick={() => {
 				setIcon(`${iconset}/`)

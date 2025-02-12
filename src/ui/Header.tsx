@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import AddressBar from '@/ui/AddressBar'
-import { iconsets } from '@/lib/iconManifest'
+import { iconsets } from '@/lib/manifest'
 import IconsetButton from './IconsetButton'
 
 export default function Header() {
 	return (
-		<header className="flex text-xl">
+		<header className="flex">
 			<h1>
 				<Link href="/">ic0n.dev</Link>
 			</h1>

@@ -10,20 +10,26 @@
 }
 
 @layer base {
+	::selection {
+		background-color: var(--color-accent);
+		color: var(--color-ink);
+	}
+
+	:focus-visible {
+		outline: none;
+	}
+
 	html {
 		accent-color: var(--color-accent);
 		caret-color: var(--color-accent);
 	}
 
-	:focus-visible {
-		/* outline: none; */
+	label,
+	button {
+		cursor: pointer;
 	}
 
 	input {
 		@apply placeholder:text-ink/50;
-	}
-
-	button {
-		cursor: pointer;
 	}
 }

@@ -30,38 +30,39 @@ import * as ti from 'react-icons/ti'
 import * as vsc from 'react-icons/vsc'
 import * as wi from 'react-icons/wi'
 
-export type Iconset =
-	| 'ai'
-	| 'bi'
-	| 'bs'
-	| 'cg'
-	| 'ci'
-	| 'di'
-	| 'fa'
-	| 'fa6'
-	| 'fc'
-	| 'fi'
-	| 'gi'
-	| 'go'
-	| 'gr'
-	| 'hi'
-	| 'hi2'
-	| 'im'
-	| 'io'
-	| 'io5'
-	| 'lia'
-	| 'lu'
-	| 'md'
-	| 'pi'
-	| 'ri'
-	| 'rx'
-	| 'si'
-	| 'sl'
-	| 'tb'
-	| 'tfi'
-	| 'ti'
-	| 'vsc'
-	| 'wi'
+export const iconsets = [
+	'ai',
+	'bi',
+	'bs',
+	'cg',
+	'ci',
+	'di',
+	'fa',
+	'fa6',
+	'fc',
+	'fi',
+	'gi',
+	'go',
+	'gr',
+	'hi',
+	'hi2',
+	'im',
+	'io',
+	'io5',
+	'lia',
+	'lu',
+	'md',
+	'pi',
+	'ri',
+	'rx',
+	'si',
+	'sl',
+	'tb',
+	'tfi',
+	'ti',
+	'vsc',
+	'wi',
+] as const
 
 export const manifest = {
 	ai,
@@ -95,8 +96,4 @@ export const manifest = {
 	ti,
 	vsc,
 	wi,
-} as Record<Iconset, any>
-
-export const iconsets = Object.keys(manifest) as Iconset[]
-
-export type IconPath = `${Iconset}/${string}`
+} as Record<Icon.Set, any>

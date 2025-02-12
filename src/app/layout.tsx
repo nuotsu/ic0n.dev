@@ -1,4 +1,5 @@
 import Header from '@/ui/Header'
+import Footer from '@/ui/Footer'
 import type { Metadata } from 'next'
 import '@/styles/app.css'
 
@@ -26,7 +27,7 @@ export default function RootLayout({
 
 				<main className="grid grow place-content-center">{children}</main>
 
-				<footer></footer>
+				<Footer />
 			</body>
 		</html>
 	)
