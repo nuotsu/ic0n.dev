@@ -1,3 +1,9 @@
+import Icon from '@/ui/Icon'
+
 export default function Home() {
-	return <section></section>
+	return (
+		<section>
+			<Icon />
+		</section>
+	)
 }

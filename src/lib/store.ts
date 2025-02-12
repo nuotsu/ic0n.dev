@@ -1,25 +1,28 @@
 'use client'
 
 import { create } from 'zustand'
+import type { IconPath } from './iconManifest'
 
-const dev = process.env.NODE_ENV === 'development'
+export const DEFAULT_ICON = 'vsc/VscCode'
 
-export const BASE_URL = dev
-	? 'http://localhost:3000'
-	: 'https://ic0n.dev'
-
-export const DEFAULT_ICONS = ['fa/FaReact', 'gr/GrApple', 'vsc/VscVscode']
-
-export const store = create<{
-	icon: string
-	setIcon: (icon: string) => void
-
+export const useStore = create<{
+	icon: IconPath
 	color: string
+	setIcon: (icon: IconPath) => void
 	setColor: (color: string) => void
 }>((set) => ({
-	icon: DEFAULT_ICONS[0],
+	icon: DEFAULT_ICON,
+	color: 'white',
 	setIcon: (icon) => set({ icon }),
-
-	color: '#1e90ff',
 	setColor: (color) => set({ color }),
 }))
+
+export const getColor = () => {
+	const { color } = useStore()
+	return color.startsWith('#') ? `hex=${color.slice(1)}` : `fill=${color}`
+}
+
+export const getAddressBarSize = () => {
+	const { icon } = useStore()
+	return icon.length
+}

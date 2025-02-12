@@ -1,9 +1,29 @@
+@import './fonts.css';
 @import 'tailwindcss';
 
 @theme {
 	--color-canvas: #000;
 	--color-ink: #fff;
+	--color-accent: orangered;
+	--font-mono: 'Doto', monospace;
+	/* --font-mono: 'Geist Mono', monospace; */
 }
 
 @layer base {
+	html {
+		accent-color: var(--color-accent);
+		caret-color: var(--color-accent);
+	}
+
+	:focus-visible {
+		/* outline: none; */
+	}
+
+	input {
+		@apply placeholder:text-ink/50;
+	}
+
+	button {
+		cursor: pointer;
+	}
 }

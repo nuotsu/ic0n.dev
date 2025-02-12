@@ -96,3 +96,7 @@ export const manifest = {
 	vsc,
 	wi,
 } as Record<Iconset, any>
+
+export const iconsets = Object.keys(manifest) as Iconset[]
+
+export type IconPath = `${Iconset}/${string}`

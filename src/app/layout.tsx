@@ -1,3 +1,4 @@
+import Header from '@/ui/Header'
 import type { Metadata } from 'next'
 import '@/styles/app.css'
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
 	description:
 		'SVG icons as URLs to use in <img> tags, courtesy of react-icons.',
 	icons: {
-		icon: '/vsc/VscCode?hex=fff',
+		icon: '/ri/RiCreativeCommonsZeroFill?fill=orangered',
 	},
 	alternates: {
 		canonical: 'https://ic0n.dev',
@@ -20,8 +21,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="bg-canvas text-ink">
-				<main>{children}</main>
+			<body className="bg-canvas text-ink flex min-h-svh flex-col font-mono">
+				<Header />
+
+				<main className="grid grow place-content-center">{children}</main>
+
+				<footer></footer>
 			</body>
 		</html>
 	)
