@@ -1,13 +1,12 @@
-import Header from '@/ui/Header'
-import Footer from '@/ui/Footer'
 import type { Metadata } from 'next'
-import '@/styles/globals.css'
+import '@/styles/app.css'
 
 export const metadata: Metadata = {
 	title: 'ic0n.dev',
-	description: 'SVG icons as URLs to use in <img> tags, courtesy of react-icons.',
+	description:
+		'SVG icons as URLs to use in <img> tags, courtesy of react-icons.',
 	icons: {
-		icon: '/fa/FaReact?fill=dodgerblue',
+		icon: '/vsc/VscCode?hex=fff',
 	},
 	alternates: {
 		canonical: 'https://ic0n.dev',
@@ -21,10 +20,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="grid items-center gap-4">
-				<Header />
+			<body className="bg-canvas text-ink">
 				<main>{children}</main>
-				<Footer />
 			</body>
 		</html>
 	)

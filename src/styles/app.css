@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-canvas: #000;
+	--color-ink: #fff;
+}
+
+@layer base {
+}
