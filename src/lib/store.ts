@@ -2,7 +2,10 @@
 
 import { create } from 'zustand'
 
-export const DEFAULT_ICON = 'vsc/VscCode'
+const starters: Icon.Path[] = ['ri/RiCreativeCommonsZeroFill', 'vsc/VscGithub']
+
+export const DEFAULT_ICON =
+	starters[Math.floor(Math.random() * starters.length)]
 export const DEFAULT_COLOR = 'white'
 
 const BASE_URL =

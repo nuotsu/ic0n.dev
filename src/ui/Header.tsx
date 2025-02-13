@@ -14,8 +14,16 @@ export default function Header() {
 				<AddressBar />
 
 				<menu className="absolute top-full left-[1ch] columns-4 gap-0">
-					{iconsets.map((iconset) => (
-						<li key={iconset}>
+					{iconsets.map((iconset, i) => (
+						<li
+							className="anim-fade opacity-0 [--x:-0.5ch]"
+							style={
+								{
+									'--delay': `${i * 10}ms`,
+								} as React.CSSProperties
+							}
+							key={iconset}
+						>
 							<IconsetButton iconset={iconset} />
 						</li>
 					))}

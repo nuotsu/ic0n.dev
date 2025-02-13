@@ -13,7 +13,7 @@ export default function Courtesy() {
 	const url = `${BASE_URL}${path}`
 
 	return (
-		<cite className="not-italic">
+		<cite className="grow not-italic">
 			<p>
 				<span className="text-ink/50">Courtesy of </span>
 				<a href={BASE_URL} target="_blank">
