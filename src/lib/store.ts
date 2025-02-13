@@ -2,7 +2,15 @@
 
 import { create } from 'zustand'
 
-const starters: Icon.Path[] = ['ri/RiCreativeCommonsZeroFill', 'vsc/VscGithub']
+const starters: Icon.Path[] = [
+	'fa/FaTiktok',
+	'io5/IoTrash',
+	'md/MdOutlineRamenDining',
+	'md/MdContentCopy',
+	'si/SiYoutube',
+	'vsc/VscRegex',
+	'vsc/VscGithub',
+]
 
 export const DEFAULT_ICON =
 	starters[Math.floor(Math.random() * starters.length)]

@@ -9,7 +9,7 @@ export default function AddressBar() {
 	const addressBarWidth = getAddressBarSize()
 
 	return (
-		<label className="flex">
+		<label className="anim-fade-to-r flex opacity-0 [--delay:200ms] [--duration:400ms]">
 			<span className="text-ink/50">/</span>
 			<input
 				id="address-bar"
