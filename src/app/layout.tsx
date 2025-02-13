@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="bg-canvas text-ink flex min-h-svh flex-col gap-[1ch] p-[1ch] pb-[min(1ch,env(safe-area-inset-bottom))] font-mono">
+			<body className="bg-canvas text-ink flex min-h-svh flex-col gap-[1ch] p-[1ch] pb-[max(1ch,env(safe-area-inset-bottom))] font-mono">
 				<Header />
 
 				<main className="grid grow place-content-center">{children}</main>
